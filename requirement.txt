@@ -1,0 +1,10 @@
+- Write CRUD API from predefined model
+- Use Mysql as the database
+- Implement clean architecture for project: 
+    - delivery
+        - http
+    - handler
+    - repository
+    - domain
+    - cmd
+- Write test to cover 90% package final/task1/handler 
