@@ -3,13 +3,13 @@ package config
 import (
 	"fmt"
 
-	"hithub.com/JIeeiroSst/go-app/repository/mysql"
 	"github.com/kelseyhightower/envconfig"
+	"hithub.com/JIeeiroSst/go-app/repository/mysql"
 )
 
 type WebConfig struct {
-	PORT string 	`envconfig:"WEB_PORT"`
-	MysqlConfig mysql.Config `envconfig:"WEB_MYSQL"`
+	PORT string 	`envconfig:"WEB_PORT" default:":4040"`
+	MysqlConfig mysql.Config `envconfig:"WEB_MYSQL" default:"docker:docker@tcp(localhost:3306)/db?parseTime=True"`
 }
 
 var Config WebConfig
